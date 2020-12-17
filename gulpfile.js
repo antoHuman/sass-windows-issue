@@ -6,10 +6,13 @@ const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const postcssCustomProperties = require('postcss-custom-properties');
 
+const sourcemaps = require('gulp-sourcemaps');
+
 const browser_support = ['last 2 versions', 'Firefox >= 51', 'iOS >= 8', 'ie 11'];
 
 task('default', () => {
     return src('*.{scss,css}', {cwd: '.'})
+        .pipe(sourcemaps.init())
         .pipe(sass().on('error', sass.logError))
         .pipe(
             sass({
@@ -25,5 +28,6 @@ task('default', () => {
                 }),
             ])
         )
+        .pipe(sourcemaps.write('./'))
         .pipe(dest('./'));
 });
