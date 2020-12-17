@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node-sass -v",
     "node-sass": "node-sass",
-    "test": "node-sass test.scss"
+    "test": "gulp"
   },
   "repository": {
     "type": "git",
@@ -20,5 +20,9 @@
   "homepage": "https://github.com/antonio-sferruzza/sass-windows-issue#readme",
   "devDependencies": {
     "node-sass": "^4.14.1"
+  },
+  "dependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.1.0"
   }
 }
