@@ -1,0 +1,24 @@
+{
+  "name": "sass-windows-issue",
+  "version": "0.0.0",
+  "description": "Testing node-sass issue on windows",
+  "main": " ",
+  "scripts": {
+    "start": "node-sass -v",
+    "node-sass": "node-sass",
+    "test": "node-sass test.scss"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/antonio-sferruzza/sass-windows-issue.git"
+  },
+  "author": "Antonio Sferruzza",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/antonio-sferruzza/sass-windows-issue/issues"
+  },
+  "homepage": "https://github.com/antonio-sferruzza/sass-windows-issue#readme",
+  "devDependencies": {
+    "node-sass": "^4.14.1"
+  }
+}
