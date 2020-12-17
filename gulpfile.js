@@ -1,13 +1,14 @@
 const {task, src, dest} = require('gulp');
-const gulpSass = require('gulp-sass');
-gulpSass.compiler = require('node-sass');
+const sass = require('gulp-sass');
+sass.compiler = require('node-sass');
 
 task('default', () => {
-    return src('./test.scss')
+    return src('*.{scss,css}', {cwd: '.'})
+        .pipe(sass().on('error', sass.logError))
         .pipe(
-            gulpSass({
+            sass({
                 outputStyle: 'expanded',
-            }).on('error', gulpSass.logError)
+            }).on('error', sass.logError)
         )
         .pipe(dest('./'));
 });
